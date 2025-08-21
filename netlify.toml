@@ -8,17 +8,18 @@
   to = "/.netlify/functions/:splat"
   status = 200
 
-[functions."rag"]
-  external_node_modules = ["llamaindex", "pdf-parse"]
-
 [functions."upload"]
   external_node_modules = ["multiparty"]
+  node_bundler = "esbuild"
+
+[functions."rag"]
+  external_node_modules = ["llamaindex", "pdf-parse"]
+  node_bundler = "esbuild"
 
 [functions."chat"]
   external_node_modules = ["@google/genai"]
+  node_bundler = "esbuild"
 
 [functions."pages"]
   external_node_modules = []
-  
-[functions]
   node_bundler = "esbuild"
