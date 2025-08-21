@@ -40,7 +40,7 @@ const App: React.FC = () => {
       formData.append('file', file);
 
       try {
-        const response = await fetch('https://your-app.onrender.com/upload', {
+        const response = await fetch('https://playpower-backend-bvhk.onrender.com/upload', {
           method: 'POST',
           body: formData,
         });
@@ -94,7 +94,7 @@ const App: React.FC = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('https://your-app.onrender.com/chat', {
+      const response = await fetch('https://playpower-backend-bvhk.onrender.com/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ docId, message, history: newHistory }),
